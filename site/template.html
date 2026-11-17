@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}} · AI Scientist Roadmap</title>
+<meta name="description" content="A free, self-study path from zero to computer scientist and AI researcher.">
+<link rel="stylesheet" href="{{root}}static/style.css">
+</head>
+<body data-root="{{root}}" data-page="{{key}}">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button class="menu" id="menu" aria-controls="rail" aria-expanded="false">Curriculum</button>
+  <a class="brand" href="{{root}}index.html">AI Scientist Roadmap</a>
+  <button class="theme" id="theme" aria-label="Toggle dark mode"></button>
+</header>
+<div class="shell">
+  <aside class="side">{{rail}}
+    <p class="note" id="note">Progress is saved in this browser only.</p>
+  </aside>
+  <main id="main" class="doc">
+    <div class="bar" id="bar" hidden><div class="fill" id="fill"></div><span id="bartxt"></span></div>
+    <div class="filters" id="filters" hidden>
+      <label><input type="checkbox" id="f-core"> Must-do only</label>
+      <label><input type="checkbox" id="f-cc"> Coursera only</label>
+      <label><input type="checkbox" id="f-done"> Hide done</label>
+    </div>
+    <article>{{body}}</article>
+  </main>
+</div>
+<script>window.PAGES = {{pages}};</script>
+<script src="{{root}}static/app.js"></script>
+</body>
+</html>
