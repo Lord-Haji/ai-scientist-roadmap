@@ -13,34 +13,24 @@ OUT = ROOT / "_site"
 HERE = Path(__file__).resolve().parent
 
 LEVELS = [
-    ("levels/L0-foundations.md", "0", "Foundations", "60-100 h"),
-    ("levels/L1-cs-core.md", "1", "CS core", "900-1,100 h"),
-    ("levels/L2-math.md", "2", "Math for AI", "250-350 h"),
-    ("levels/L3-classical-ml.md", "3", "Classical ML", "150-200 h"),
-    ("levels/L4-deep-learning.md", "4", "Deep learning", "300-450 h"),
-    ("levels/L5-transformers-llms.md", "5", "Transformers and LLMs", "350-500 h"),
-    ("levels/L6-frontier-core.md", "6", "Frontier core", "400-500 h"),
+    ("path/01-foundations.md", "1", "Foundations", "~110 h"),
+    ("path/02-neural-nets.md", "2", "Neural nets from scratch", "~110 h"),
+    ("path/03-transformers.md", "3", "Transformers", "~80 h"),
+    ("path/04-local-llms.md", "4", "Open-weight and local LLMs", "~80 h"),
+    ("path/05-build-llm-apps.md", "5", "Build with LLMs", "~110 h"),
+    ("path/06-fine-tune.md", "6", "Fine-tune open models", "~80 h"),
 ]
 TRACKS = [
-    ("tracks/A-llm-research.md", "A", "LLM research"),
-    ("tracks/B-agents-multiagent.md", "B", "Agents and multi-agent"),
-    ("tracks/C-vlm-multimodal.md", "C", "Vision-language, generative"),
-    ("tracks/D-safety-interpretability.md", "D", "Safety and interpretability"),
-    ("tracks/E-rl-reasoning.md", "E", "RL and reasoning"),
-    ("tracks/F-ml-systems.md", "F", "ML systems"),
-    ("tracks/G-applied-ai-engineering.md", "G", "Applied AI engineering"),
-    ("tracks/H-data-science.md", "H", "Data science"),
-    ("tracks/I-robotics-embodied.md", "I", "Robotics (optional)"),
+    ("research/R1-train-and-scale.md", "R1", "Train and scale"),
+    ("research/R2-agents-evals-safety.md", "R2", "Agents, evals, safety"),
+    ("research/R3-multimodal.md", "R3", "Multimodal and generative"),
 ]
-START = [("README.md", "Overview"), ("00-HOW-TO-STUDY.md", "How to study"), ("TRACKER.md", "Tracker")]
+START = [("README.md", "Overview"), ("00-HOW-TO-STUDY.md", "How to study"), ("TRACKER.md", "Tracker"), ("projects/README.md", "Projects")]
 LEVEL8 = [
+    ("research/README.md", "Research phase and gate"),
     ("research-skills/README.md", "Research skills"),
-    ("papers/README.md", "Papers"),
-    ("projects/README.md", "Projects"),
-    ("career/job-ready.md", "Job-ready guide"),
-    ("career/interview-prep.md", "Interview prep"),
 ]
-EXTRA = [("coursera.md", "Coursera picks"), ("levels/AUDIT-OLD-ROADMAP.md", "Old roadmap audit"), ("MAINTENANCE.md", "Maintenance")]
+EXTRA = [("SIDE-QUESTS.md", "Side quests"), ("reference/README.md", "Reference library"), ("MAINTENANCE.md", "Maintenance")]
 
 # Courses checked by web search on 2026-11-17. Anything not listed was not re-checked.
 CHECKED = "Checked by web search, Nov 2026"
@@ -169,14 +159,14 @@ def rail(cur: Path) -> str:
         o.append(f'<li class="{cls}" data-page="{key}"><a href="{rel_url(cur, t)}"><span class="node" aria-hidden="true">{num}</span>'
                  f'<span class="nm">{name}<small>{hrs}</small></span><span class="pc" data-pc></span></a></li>')
     o.append('</ol>')
-    o.append('<p class="sub">Level 7: specializations, pick 1-2</p><ol class="path tracks">')
+    o.append('<p class="sub">Research branches: pick one</p><ol class="path tracks">')
     for p, let, name in TRACKS:
         t = out_path(ROOT / p); key = str(t).replace("\\", "/")
         cls = "cur" if t == cur else ""
         o.append(f'<li class="{cls}" data-page="{key}"><a href="{rel_url(cur, t)}"><span class="node sm" aria-hidden="true">{let}</span>'
                  f'<span class="nm">{name}</span><span class="pc" data-pc></span></a></li>')
-    o.append('</ol><p class="sub">Level 8: research and career</p><div class="grp">' + "".join(link(p, t) for p, t in LEVEL8) + "</div>")
-    o.append('<p class="sub">Reference</p><div class="grp">' + "".join(link(p, t) for p, t in EXTRA) + "</div></nav>")
+    o.append('</ol><p class="sub">Research</p><div class="grp">' + "".join(link(p, t) for p, t in LEVEL8) + "</div>")
+    o.append('<p class="sub">More</p><div class="grp">' + "".join(link(p, t) for p, t in EXTRA) + "</div></nav>")
     return "".join(o)
 
 def main():

@@ -1,93 +1,58 @@
-# How to Study This Curriculum
+# How to study
 
 ## The completion rule
 
-A course or book is **done** when you can:
+An item is **done** when you can explain it without notes, implement the key part yourself, and say how it fails. Watching is the entry fee, not the work.
 
-1. explain the main idea without notes,
-2. derive the central math,
-3. implement the important mechanism at small scale,
-4. name its failure modes,
-5. reproduce one non-trivial result.
+## A week at 20 hours
 
-Watching videos is the entry fee, not the work.
+| Day | Focus | Hours |
+|---|---|---:|
+| Mon | New material: course or reading | 3 |
+| Tue | Code along or implement it yourself | 3 |
+| Wed | Code along or implement it yourself | 3 |
+| Thu | Experiment: write your prediction first, then run | 3 |
+| Fri | Project work | 3 |
+| Sat | Project work, or catch up | 4 |
+| Sun | Review notes, plan next week | 1 |
 
-## The weekly loop (10-15 h/week)
+At 10 h/week, halve each block. Rest weeks are fine; do not skip the review.
 
-| Day | Focus | Typical block |
-|---|---|---|
-| Mon | Theory and math | 60 min concepts, 45 min derivation, 15 min recall |
-| Tue | Implementation | 20 min recall, 90 min coding, 10 min notes |
-| Wed | Implementation | 90 min coding, 30 min tests and debugging |
-| Thu | Experiments | 30 min prediction, 60 min experiment, 30 min analysis |
-| Fri | Paper (from Level 3 onward) | 45 min reading, 60 min reproduction, 15 min notes |
-| Weekend | Review and spaced repetition | 60 min |
-
-For serious experiments **write the predicted outcome before running** it. This is how you build taste.
-
-## Resource labels used in every level file
+## Resource labels
 
 | Label | Meaning |
 |---|---|
-| ★ **Core** | Follow as the main course. Part of the must-do spine. |
-| **Companion** | Read selectively alongside a core resource. |
-| **Reference** | Look things up when needed. |
-| **Depth** | Optional deepening; take when a track or project needs it. |
+| ★ | Do it, in order. |
+| Optional | Skip unless you have a reason. |
 
-## Test-out checks
+## Projects
 
-Each level starts with a short test-out. If you can do it cold in the stated time, skip the level or the sub-block. Be honest: run the code, derive the equation on paper.
+One GitHub repo, one folder per project (see [Projects](projects/README.md)). Each folder has a `README.md`, a way to run it with one command, and a `report.md` that says what you predicted, what happened, and where it failed.
 
-## Project standard
+Habits that save time:
 
-Keep **one long-lived repository** of your own, one folder per project:
+- Write the expected result **before** you run an experiment.
+- Change one thing at a time.
+- Keep a held-out test set you do not touch until the end.
+- Before a big run, overfit one tiny batch on a small model.
+- Report failed runs. They are the useful part.
 
-```
-my-ai-from-first-principles/
-  00-.../  01-.../  ...
-  papers/            notes and reproductions
-```
+## Compute
 
-Each serious project contains `README.md`, `src/`, `tests/`, `experiments/`, `configs/`, `report.md`. The report states: problem, relevant math, implementation, **predictions made before experiments**, results, failure analysis, reproduction target, conclusions.
+| Stage | What you need |
+|---|---|
+| 1-3 | Any laptop. Free Colab or Kaggle GPU for the GPT run. |
+| 4 | A laptop with 16 GB RAM can run small models. 8 GB or more of GPU memory, or an Apple Silicon Mac with 16 GB or more, runs 7-8B models comfortably. |
+| 5-6 | Same as stage 4. Fine-tuning small models fits free Colab or Kaggle GPUs. |
+| Research | Rent a cloud GPU only after the idea already works at small scale. |
 
-Rules of experimental hygiene:
+## Using AI assistants
 
-- fixed seeds where appropriate, and several seeds when variance matters,
-- keep configs and raw metrics, never only the final number,
-- strictly separate train / validation / test,
-- report failed runs,
-- ablations change **one** variable at a time.
-
-Before scaling up any experiment: unit-test on CPU, overfit one tiny batch, run a tiny model, profile.
-
-## Notes system
-
-- One note per paper (template in [`research-skills/paper-note-template.md`](research-skills/paper-note-template.md)).
-- One "derivations" notebook per level: write every key derivation by hand once.
-- Spaced repetition (Anki or similar) for definitions, shapes, and standard equations only. Not for trivia.
-
-## Learning with AI assistants
-
-Use LLMs as tutors and reviewers, not as the author of your solutions:
-
-- Attempt first, then ask for a critique of your attempt.
-- Ask for counter-examples and edge cases to your understanding.
-- For from-scratch projects (autograd, GPT, RL loop) write the core yourself. The point is the struggle.
-- Use coding assistants freely for tooling, plotting, boilerplate, and infra.
-
-## Compute plan
-
-| Phase | Work | Compute |
-|---|---|---|
-| Levels 0-3 | math, classical ML, small nets | CPU / laptop |
-| Level 4-5 | CNNs, small GPT, small diffusion/VLM | consumer GPU or free cloud notebooks |
-| Level 5-6 end, tracks | 100M+ param runs, RL post-training, serving | rented cloud GPU, only when an experiment justifies it |
-
-Rule: never rent big compute for something you have not first run on a tiny model on CPU.
+Use them as a tutor and reviewer, not as the author. Try first, then ask for a critique. For the from-scratch projects (autograd, tokenizer, GPT, agent loop) write the core yourself. Use assistants freely for boilerplate, plotting and setup.
 
 ## When you are stuck
 
 1. Shrink the problem until it works, then grow it.
 2. Re-derive on paper.
-3. Read someone else's minimal implementation (nanoGPT, nanochat, CleanRL, minGPT-style repos), then close it and re-write yours.
-4. Ask a specific question in a community with your minimal reproduction.
+3. Read a minimal implementation (nanoGPT, nanochat, llama.cpp examples), close it, and write yours.
+4. Ask a specific question with a minimal example.

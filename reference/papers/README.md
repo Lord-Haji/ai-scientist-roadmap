@@ -2,7 +2,7 @@
 
 Papers are read **inside the level where their prerequisites are met**. Labels: **H** historical (abstract, intro, key sections), **C** core (method, equations, experiments, limitations), **R** reproduce one decisive mechanism or result at small scale. arXiv IDs are given where one exists; use `https://arxiv.org/abs/<id>`.
 
-> Pace: one paper per week from Level 3, two per week from Level 5. Always write a note ([template](../research-skills/paper-note-template.md)). Re-check IDs before relying on them; mistakes are possible. Run [`scripts/check_links.py`](../scripts/check_links.py) for course links.
+> Pace: one paper per week from Level 3, two per week from Level 5. Always write a note ([template](../../research-skills/paper-note-template.md)). Re-check IDs before relying on them; mistakes are possible. Run [`scripts/check_links.py`](../../scripts/check_links.py) for course links.
 
 ## Level 3-4: Learning and deep learning
 

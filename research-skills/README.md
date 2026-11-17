@@ -73,6 +73,6 @@ Reproduction -> reproduction with ablation -> component modification -> original
 
 ## 7. Choosing a direction
 
-Pick a track (see [`tracks/`](../tracks/)), read 20 recent papers in a narrow subarea, list open questions, talk to practitioners, and choose a question you can answer with the compute you have. Prefer questions where a small-scale result is informative.
+Pick a branch (see [`research/`](../research/README.md)), read 20 recent papers in a narrow subarea, list open questions, talk to practitioners, and choose a question you can answer with the compute you have. Prefer questions where a small-scale result is informative.
 
 Template: [`paper-note-template.md`](paper-note-template.md).

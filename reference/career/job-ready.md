@@ -23,7 +23,7 @@ The curriculum is designed to qualify you for several role families. Pick the on
 
 ## Building the portfolio
 
-1. Pick 4-6 projects from [`projects/README.md`](../projects/README.md): at least one engineering (service), one ML-from-scratch, one LLM/agent system with evals, one research-style reproduction.
+1. Pick 4-6 projects from [`projects/README.md`](../../projects/README.md): at least one engineering (service), one ML-from-scratch, one LLM/agent system with evals, one research-style reproduction.
 2. Write a one-page summary per project: problem, approach, result (with numbers), what failed, what you would do next.
 3. Keep a public GitHub profile with pinned repos and clean READMEs; write 2-3 technical blog posts explaining what you learned or found.
 4. Contribute to open source: start with docs/tests/bug fixes in LLM tooling repos (LangChain, Haystack, LlamaIndex, vLLM, Hugging Face libraries); progress to features.

@@ -1,73 +1,59 @@
-# Progress Tracker
+# Progress tracker
 
-Copy this file into your notes. Mark `[x]` when the **completion rule** is met (explain, derive, implement, break, reproduce). Start date: ____ Target pace: ____ h/week
+Copy this into your own notes. Tick an item only when you meet the completion rule in [How to study](00-HOW-TO-STUDY.md). Start date: ____ Hours per week: ____
 
-## Level 0: Foundations
-- [ ] Test-out passed or CS50P done
-- [ ] MIT Missing Semester
-- [ ] Python/NumPy fundamentals
-- [ ] Project 00-scientific-python
+## Stage 1: Foundations (weeks 1-6)
+- [ ] A local model runs on my machine
+- [ ] Python, pandas, NumPy, git basics
+- [ ] Linear algebra and calculus intuition (3Blue1Brown, matrix calculus)
+- [ ] Probability basics
+- [ ] Machine Learning Specialization, courses 1-2
+- [ ] Project 1: tabular ML with report
 
-## Level 1: CS Core
-- [ ] CS50x (or test-out) / CS61A
-- [ ] C/C++ or Rust basics
-- [ ] Algorithms (Princeton + MIT 6.006) + weekly interview practice
-- [ ] MIT 6.042J Mathematics for CS
-- [ ] Nand2Tetris and/or CS:APP
-- [ ] OSTEP
-- [ ] Networking (Kurose and Ross)
-- [ ] Databases (CMU 15-445) + SQL
-- [ ] Distributed systems (6.5840) + DDIA
-- [ ] Software engineering course + Docker/CI basics
-- [ ] Security fundamentals; ethics
-- [ ] Projects 01, 02, 03
+## Stage 2: Neural networks (weeks 7-12)
+- [ ] micrograd
+- [ ] makemore series
+- [ ] PyTorch basics
+- [ ] fast.ai lessons 1-3
+- [ ] Project 2: from-scratch nets with report
 
-## Level 2: Math
-- [ ] Linear algebra (18.06)
-- [ ] Calculus incl. multivariable
-- [ ] Probability (Stat 110)
-- [ ] Statistics (ISLP)
-- [ ] Information theory + optimization
-- [ ] Projects 10-13
+## Stage 3: Transformers (weeks 13-16)
+- [ ] Let's build GPT
+- [ ] Tokenizer
+- [ ] Reproduce GPT-2 (124M)
+- [ ] Raschka: Build an LLM from scratch
+- [ ] Hugging Face LLM Course, chapters 1-4
+- [ ] Project 3: my GPT with scaling plot
 
-## Level 3: Classical ML
-- [ ] Ng ML Specialization (optional on-ramp)
-- [ ] CS229
-- [ ] ISLP + scikit-learn + Kaggle Learn
-- [ ] Projects 20, 21
+## Stage 4: Open-weight and local LLMs (weeks 17-20)
+- [ ] Ollama, LM Studio, llama.cpp
+- [ ] GGUF and quantization
+- [ ] Model cards and licenses
+- [ ] lm-evaluation-harness run
+- [ ] vLLM or llama.cpp server, structured output
+- [ ] Local embeddings and Docker stack
+- [ ] Project 4: local model bench
 
-## Level 4: Deep Learning
-- [ ] Karpathy Zero to Hero (coded along)
-- [ ] Understanding Deep Learning
-- [ ] CMU 10-414/714 (mini-framework)
-- [ ] CS231n
-- [ ] Projects 30-33
+## Stage 5: Build with LLMs (weeks 21-26)
+- [ ] Function calling on a local model
+- [ ] RAG with hybrid search and recall@k
+- [ ] ReAct loop written by hand
+- [ ] MCP server
+- [ ] Prompt-injection test
+- [ ] Eval set of 50+ cases, LLM-judge checked
+- [ ] Flagship project, run by someone else
 
-## Level 5: Transformers and LLMs
-- [ ] CS224N
-- [ ] CS336 (assignments, not just lectures)
-- [ ] Raschka LLM-from-scratch + nanochat read-through
-- [ ] Modern architecture lab
-- [ ] Projects 40-43
+## Stage 6: Fine-tune (weeks 27-30)
+- [ ] Dataset of 500-2,000 examples with held-out set
+- [ ] LoRA/QLoRA fine-tune
+- [ ] Before/after eval with error bars
+- [ ] Model served in Ollama via GGUF
+- [ ] DPO run
+- [ ] Tiny GRPO run
+- [ ] Project 6: fine-tune vs prompt
 
-## Level 6: Frontier Core
-- [ ] RL: Sutton-Barto + CS234 + HF Deep RL
-- [ ] Post-training: SFT, DPO, RLVR
-- [ ] Multimodal: 11-777 + MIT 6.S184
-- [ ] Agents: HF Agents + MCP + Berkeley Agentic AI + CS329A
-- [ ] Projects 50-54
-
-## Level 7: Specializations (pick 1-2)
-- [ ] A LLM research  - [ ] B Agents/multi-agent  - [ ] C VLM/generative
-- [ ] D Safety/interp  - [ ] E RL/reasoning  - [ ] F ML systems
-- [ ] G Applied AI eng  - [ ] H Data science  - [ ] I Robotics (optional)
-
-## Level 8: Research and Career
-- [ ] 3 paper reproductions
-- [ ] 2 ablation/modification studies
-- [ ] 1 independent research project
-- [ ] 1 report (6-10 pages)
-- [ ] 1 analyzed negative result
-- [ ] Portfolio of 4-6 public projects
-- [ ] Interview rhythm established
-- [ ] First workshop/post/paper submission
+## Research phase (optional)
+- [ ] Gate: reproduction and ablation report
+- [ ] Branch chosen: R1 / R2 / R3
+- [ ] Branch steps done
+- [ ] Research project published
